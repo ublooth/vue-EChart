@@ -13,7 +13,10 @@ import {
   Menu,
   Submenu,
   MenuItem,
-  MenuItemGroup, } from 'element-ui';
+  MenuItemGroup,
+  Row,
+  Col
+} from 'element-ui';
 Vue.use(Button)
 Vue.use(Select)
 Vue.use(Option)
@@ -21,10 +24,8 @@ Vue.use(Menu)
 Vue.use(Submenu)
 Vue.use(MenuItem)
 Vue.use(MenuItemGroup)
-/* 或写为
- * Vue.use(Button)
- * Vue.use(Select)
- */
+Vue.use(Row)
+Vue.use(Col)
 
 Vue.config.productionTip = false
 

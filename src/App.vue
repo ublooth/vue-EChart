@@ -1,12 +1,30 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    </div> -->
+    <el-row>
+      <el-col :span="4">
+        <NavMenu />
+      </el-col>
+      <el-col :span="20">
+        <router-view/>
+      </el-col>
+    </el-row>
+    
+    
   </div>
 </template>
+
+<script>
+import NavMenu from "@/components/NavMenu.vue";
+export default {
+  components: {
+    NavMenu,
+  },
+}
+</script>
 
 <style lang="scss">
 * {
@@ -25,6 +43,10 @@ html, body {
   color: #2c3e50;
   width: 100%;
   height: 100%;
+  .el-row,
+  .el-col {
+    height: 100%;
+  }
 }
 
 #nav {
